@@ -4,6 +4,12 @@
 
 PS5-P2PINFO is a Windows monitoring tool for Armored Core peer traffic captured from a mirrored PS5 LAN port.
 
+## Example screen
+
+![PS5-P2PINFO monitoring example](assets/example.png)
+
+The PS5 MAC address is masked in this image.
+
 ## Download
 
 Download the latest Windows x64 installer, `PS5-P2PINFO.exe`, from [GitHub Releases](https://github.com/Rubicon-Developers/PS5-P2P-INFO/releases/latest).

@@ -4,6 +4,12 @@
 
 PS5-P2PINFO는 미러링된 PS5 유선 LAN 트래픽을 이용해 Armored Core의 P2P 연결 상태를 모니터링하는 Windows 프로그램입니다.
 
+## 예시 화면
+
+![PS5-P2PINFO 모니터링 예시](assets/example.png)
+
+이 이미지의 PS5 MAC 주소는 마스킹되어 있습니다.
+
 ## 다운로드
 
 [GitHub Releases](https://github.com/Rubicon-Developers/PS5-P2P-INFO/releases/latest)에서 최신 Windows x64 설치 프로그램인 `PS5-P2PINFO.exe`를 다운로드하세요.
