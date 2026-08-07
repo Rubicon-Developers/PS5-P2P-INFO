@@ -1,35 +1,45 @@
 # AC P2P Info
 
+**English** | [한국어](README.ko.md) | [日本語](README.ja.md)
+
 AC P2P Info is a Windows monitoring tool for Armored Core peer traffic captured from a mirrored PS5 LAN port.
 
 ## Download
 
-Download the latest `AcP2PInfoSetup.exe` from [GitHub Releases](https://github.com/Rubicon-Developers/PS5-P2P-INFO/releases/latest).
+Download the latest Windows x64 installer, `PS5-P2PINFO-Setup.exe`, from [GitHub Releases](https://github.com/Rubicon-Developers/PS5-P2P-INFO/releases/latest).
 
-The installer is currently unsigned, so Windows SmartScreen may show a warning. Verify the SHA-256 checksum published with each release before running the installer.
+This `.exe` is an installer built with Inno Setup, not a portable application file. It installs the application, creates the selected shortcuts, and adds a standard Windows uninstall entry. The application is self-contained, so a separate .NET installation is not required.
+
+The installer is currently unsigned, so Windows SmartScreen may show a warning. Verify the SHA-256 checksum published with each release before running it.
 
 ## Features
 
-- Displays pilot name, ping, RTT jitter, recent RTT spike, and packet-gap diagnostics.
-- Stores application settings, including the configured PS5 MAC address, locally in `config.json`.
+- Pilot-name monitoring
+- Ping and RTT jitter measurements
+- Recent RTT spike diagnostics
+- Packet-gap diagnostics
+- Configurable display and capture settings
 
-## Requirements
+## Supported environment
 
 - Windows 10 or Windows 11, x64
 - A managed switch configured for port mirroring
 - Both PS5 traffic directions mirrored to the monitoring PC
 - [Npcap](https://npcap.com/#download) installed with **WinPcap API-compatible Mode** enabled
-- Administrator privileges for packet capture and installation
+- Administrator privileges for installation and packet capture
 
-## Setup
+Windows ARM64 is not currently provided as a separate build.
 
-1. Connect the PS5 and monitoring PC to the managed switch.
-2. Mirror both ingress and egress traffic for the PS5 port to the PC's monitoring port.
-3. Install Npcap with WinPcap API-compatible Mode enabled.
-4. Install and launch AC P2P Info.
-5. Select the mirrored Ethernet adapter.
-6. Enter the PS5 MAC address and save the configuration.
-7. Select **Start Capture**.
+## Installation and setup
+
+1. Download `PS5-P2PINFO-Setup.exe` from the latest release.
+2. Install Npcap with WinPcap API-compatible Mode enabled.
+3. Run the installer and select the installation folder and shortcut options.
+4. Connect the PS5 and monitoring PC to the managed switch.
+5. Mirror both ingress and egress traffic for the PS5 port to the monitoring PC's port.
+6. Launch AC P2P Info and select the mirrored Ethernet adapter.
+7. Enter the PS5 MAC address and save the configuration.
+8. Select **Start Capture**.
 
 ## Source and license
 
