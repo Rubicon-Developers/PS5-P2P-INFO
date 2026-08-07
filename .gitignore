@@ -1,0 +1,8 @@
+# Release binaries belong in GitHub Releases, not in Git history.
+*.exe
+*.msi
+*.zip
+
+# Local files
+Thumbs.db
+Desktop.ini
