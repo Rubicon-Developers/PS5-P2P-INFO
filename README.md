@@ -29,7 +29,7 @@ The installer is currently unsigned, so Windows SmartScreen may show a warning. 
 ## Supported environment
 
 - Windows 10 or Windows 11, x64
-- A managed switch configured for port mirroring
+- A router or managed switch that supports port mirroring
 - Both PS5 traffic directions mirrored to the monitoring PC
 - [Npcap](https://npcap.com/#download) installed with **WinPcap API-compatible Mode** enabled
 - Administrator privileges for installation and packet capture
@@ -41,7 +41,7 @@ Windows ARM64 is not currently provided as a separate build.
 1. Download `PS5-P2PINFO-Setup.exe` from the latest release.
 2. Install Npcap with WinPcap API-compatible Mode enabled.
 3. Run the installer and select the installation folder and shortcut options.
-4. Connect the PS5 and monitoring PC to the managed switch.
+4. Connect the PS5 and monitoring PC to the router or managed switch that supports port mirroring.
 5. Mirror both ingress and egress traffic for the PS5 port to the monitoring PC's port.
 6. Launch PS5-P2PINFO and select the mirrored Ethernet adapter.
 7. Enter the PS5 MAC address and save the configuration.
