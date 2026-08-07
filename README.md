@@ -12,7 +12,7 @@ The PS5 MAC address is masked in this image.
 
 ## Download
 
-Download the latest Windows x64 installer, `PS5-P2PINFO.exe`, from [GitHub Releases](https://github.com/Rubicon-Developers/PS5-P2P-INFO/releases/latest).
+Download the latest Windows x64 installer, `PS5-P2PINFO-Setup.exe`, from [GitHub Releases](https://github.com/Rubicon-Developers/PS5-P2P-INFO/releases/latest).
 
 This `.exe` is an installer built with Inno Setup, not a portable application file. It installs the application, creates the selected shortcuts, and adds a standard Windows uninstall entry. The application is self-contained, so a separate .NET installation is not required.
 
@@ -38,7 +38,7 @@ Windows ARM64 is not currently provided as a separate build.
 
 ## Installation and setup
 
-1. Download `PS5-P2PINFO.exe` from the latest release.
+1. Download `PS5-P2PINFO-Setup.exe` from the latest release.
 2. Install Npcap with WinPcap API-compatible Mode enabled.
 3. Run the installer and select the installation folder and shortcut options.
 4. Connect the PS5 and monitoring PC to the managed switch.

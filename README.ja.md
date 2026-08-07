@@ -12,7 +12,7 @@ PS5-P2PINFOは、ミラーリングされたPS5の有線LANトラフィックを
 
 ## ダウンロード
 
-[GitHub Releases](https://github.com/Rubicon-Developers/PS5-P2P-INFO/releases/latest)から、最新のWindows x64用インストーラー `PS5-P2PINFO.exe` をダウンロードしてください。
+[GitHub Releases](https://github.com/Rubicon-Developers/PS5-P2P-INFO/releases/latest)から、最新のWindows x64用インストーラー `PS5-P2PINFO-Setup.exe` をダウンロードしてください。
 
 この `.exe` はポータブル実行ファイルではなく、Inno Setupで作成されたインストーラーです。アプリケーションのインストール、選択したショートカットの作成、Windowsの標準アンインストール項目の登録を行います。.NETを含むself-contained形式のため、.NETを別途インストールする必要はありません。
 
@@ -38,7 +38,7 @@ PS5-P2PINFOは、ミラーリングされたPS5の有線LANトラフィックを
 
 ## インストールと設定
 
-1. 最新リリースから `PS5-P2PINFO.exe` をダウンロードします。
+1. 最新リリースから `PS5-P2PINFO-Setup.exe` をダウンロードします。
 2. WinPcap API-compatible Modeを有効にしてNpcapをインストールします。
 3. インストーラーを実行し、インストール先とショートカットのオプションを選択します。
 4. PS5と監視PCをマネージドスイッチに接続します。
