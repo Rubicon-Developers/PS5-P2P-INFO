@@ -1,12 +1,12 @@
-# AC P2P Info
+# PS5-P2PINFO
 
 **English** | [한국어](README.ko.md) | [日本語](README.ja.md)
 
-AC P2P Info is a Windows monitoring tool for Armored Core peer traffic captured from a mirrored PS5 LAN port.
+PS5-P2PINFO is a Windows monitoring tool for Armored Core peer traffic captured from a mirrored PS5 LAN port.
 
 ## Download
 
-Download the latest Windows x64 installer, `PS5-P2PINFO-Setup.exe`, from [GitHub Releases](https://github.com/Rubicon-Developers/PS5-P2P-INFO/releases/latest).
+Download the latest Windows x64 installer, `PS5-P2PINFO.exe`, from [GitHub Releases](https://github.com/Rubicon-Developers/PS5-P2P-INFO/releases/latest).
 
 This `.exe` is an installer built with Inno Setup, not a portable application file. It installs the application, creates the selected shortcuts, and adds a standard Windows uninstall entry. The application is self-contained, so a separate .NET installation is not required.
 
@@ -32,12 +32,12 @@ Windows ARM64 is not currently provided as a separate build.
 
 ## Installation and setup
 
-1. Download `PS5-P2PINFO-Setup.exe` from the latest release.
+1. Download `PS5-P2PINFO.exe` from the latest release.
 2. Install Npcap with WinPcap API-compatible Mode enabled.
 3. Run the installer and select the installation folder and shortcut options.
 4. Connect the PS5 and monitoring PC to the managed switch.
 5. Mirror both ingress and egress traffic for the PS5 port to the monitoring PC's port.
-6. Launch AC P2P Info and select the mirrored Ethernet adapter.
+6. Launch PS5-P2PINFO and select the mirrored Ethernet adapter.
 7. Enter the PS5 MAC address and save the configuration.
 8. Select **Start Capture**.
 

@@ -1,12 +1,12 @@
-# AC P2P Info
+# PS5-P2PINFO
 
 [English](README.md) | **한국어** | [日本語](README.ja.md)
 
-AC P2P Info는 미러링된 PS5 유선 LAN 트래픽을 이용해 Armored Core의 P2P 연결 상태를 모니터링하는 Windows 프로그램입니다.
+PS5-P2PINFO는 미러링된 PS5 유선 LAN 트래픽을 이용해 Armored Core의 P2P 연결 상태를 모니터링하는 Windows 프로그램입니다.
 
 ## 다운로드
 
-[GitHub Releases](https://github.com/Rubicon-Developers/PS5-P2P-INFO/releases/latest)에서 최신 Windows x64 설치 프로그램인 `PS5-P2PINFO-Setup.exe`를 다운로드하세요.
+[GitHub Releases](https://github.com/Rubicon-Developers/PS5-P2P-INFO/releases/latest)에서 최신 Windows x64 설치 프로그램인 `PS5-P2PINFO.exe`를 다운로드하세요.
 
 이 `.exe` 파일은 포터블 실행 파일이 아니라 Inno Setup으로 제작된 설치 프로그램입니다. 애플리케이션을 설치하고, 선택한 바로가기를 생성하며, Windows의 표준 앱 제거 항목을 등록합니다. .NET을 포함한 self-contained 방식이므로 별도로 .NET을 설치할 필요는 없습니다.
 
@@ -32,12 +32,12 @@ AC P2P Info는 미러링된 PS5 유선 LAN 트래픽을 이용해 Armored Core�
 
 ## 설치 및 설정
 
-1. 최신 릴리스에서 `PS5-P2PINFO-Setup.exe`를 다운로드합니다.
+1. 최신 릴리스에서 `PS5-P2PINFO.exe`를 다운로드합니다.
 2. WinPcap API-compatible Mode를 활성화하여 Npcap을 설치합니다.
 3. 설치 프로그램을 실행하고 설치 폴더와 바로가기 옵션을 선택합니다.
 4. PS5와 모니터링 PC를 관리형 스위치에 연결합니다.
 5. PS5 포트의 수신·송신 트래픽을 모두 모니터링 PC 포트로 미러링합니다.
-6. AC P2P Info를 실행하고 미러링 트래픽을 받는 Ethernet 어댑터를 선택합니다.
+6. PS5-P2PINFO를 실행하고 미러링 트래픽을 받는 Ethernet 어댑터를 선택합니다.
 7. PS5 MAC 주소를 입력하고 설정을 저장합니다.
 8. **Start Capture**를 선택합니다.
 
