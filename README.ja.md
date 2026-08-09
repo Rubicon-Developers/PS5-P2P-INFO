@@ -26,6 +26,16 @@ PS5-P2PINFOは、ミラーリングされたPS5の有線LANトラフィックを
 - Packet Gap診断
 - 表示およびキャプチャ設定の調整
 
+## 関連ポリシーおよび利用規約
+
+適用されるポリシーおよび利用規約は、国または地域によって異なります。この日本語版では、日本に居住するユーザーおよび日本のPlayStationアカウントに適用される公式リンクを案内しています。ほかの国または地域で利用する場合は、その地域の最新規約をご確認ください。ゲームまたはサービス内で個別に提示される規約も適用される場合があります。
+
+PS5-P2PINFOは、適用される法律、プラットフォームポリシーおよびサービス利用規約を尊重し、遵守することを目的として設計されています。
+
+- [PlayStation Network利用規約 – 日本](https://www.playstation.com/ja-jp/legal/psn-terms-of-service/)
+- [PlayStationソフトウェアアプリケーション使用許諾契約 – 日本](https://www.playstation.com/ja-jp/legal/software-eula/)
+- [PS5用システムソフトウェア使用許諾契約 – 日本](https://www.playstation.com/ja-jp/legal/ps5-ssla/)
+
 ## 対応環境
 
 - Windows 10またはWindows 11 x64

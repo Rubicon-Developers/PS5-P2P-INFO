@@ -26,6 +26,17 @@ PS5-P2PINFO는 미러링된 PS5 유선 LAN 트래픽을 이용해 Armored Core�
 - Packet Gap 진단
 - 화면 및 캡처 설정 조정
 
+## 관련 정책 및 약관
+
+적용되는 정책과 약관은 국가 또는 지역마다 다릅니다. 이 한국어 문서에는 대한민국 거주자 및 한국 PlayStation 계정에 해당하는 공식 링크를 안내합니다. 다른 국가 또는 지역에서 사용하는 경우 해당 지역의 최신 약관을 확인해 주세요. 게임이나 서비스 내에서 별도로 제시되는 약관도 적용될 수 있습니다.
+
+PS5-P2PINFO는 적용되는 법률과 플랫폼 정책 및 서비스 약관을 존중하고 준수하는 것을 목적으로 설계되었습니다.
+
+- [PlayStation 서비스 이용약관 – 대한민국](https://www.playstation.com/ko-kr/legal/psn-terms-of-service/)
+- [PlayStation 소프트웨어 애플리케이션 사용권 계약 – 대한민국](https://www.playstation.com/ko-kr/legal/software-eula/)
+- [PS5 시스템 소프트웨어 라이선스 약관 – 대한민국](https://www.playstation.com/ko-kr/legal/ps5-ssla/)
+- [Bandai Namco Entertainment Korea 이용약관](https://www.bandainamcoent.asia/ko-kr/terms-of-use)
+
 ## 지원 환경
 
 - Windows 10 또는 Windows 11 x64

@@ -26,6 +26,32 @@ The installer is currently unsigned, so Windows SmartScreen may show a warning. 
 - Packet-gap diagnostics
 - Configurable display and capture settings
 
+## Policies and Terms
+
+Applicable policies and terms vary by country or region. The official links below are organized by country or region; please review the section that applies to your place of residence and PlayStation account. Additional terms presented within a game or service may also apply.
+
+PS5-P2PINFO is designed with the intention of respecting and complying with applicable laws, platform policies, and terms of service.
+
+### South Korea
+
+- [PlayStation Terms of Service](https://www.playstation.com/ko-kr/legal/psn-terms-of-service/)
+- [PlayStation Software Application EULA](https://www.playstation.com/ko-kr/legal/software-eula/)
+- [PS5 System Software Licence Agreement](https://www.playstation.com/ko-kr/legal/ps5-ssla/)
+- [Bandai Namco Entertainment Korea Terms of Use](https://www.bandainamcoent.asia/ko-kr/terms-of-use)
+
+### Japan
+
+- [PlayStation Network Terms of Service](https://www.playstation.com/ja-jp/legal/psn-terms-of-service/)
+- [PlayStation Software Application EULA](https://www.playstation.com/ja-jp/legal/software-eula/)
+- [PS5 System Software Licence Agreement](https://www.playstation.com/ja-jp/legal/ps5-ssla/)
+
+### United States and the Americas
+
+- [PlayStation Terms of Service](https://www.playstation.com/en-us/legal/terms-of-service/)
+- [PlayStation Software Application EULA](https://www.playstation.com/en-us/legal/software-eula/)
+- [PS5 System Software Licence Agreement](https://www.playstation.com/en-us/legal/ps5-ssla/)
+- [Bandai Namco Entertainment America Terms of Service](https://www.bandainamcoent.com/legal/bnea-tos-online-services)
+
 ## Supported environment
 
 - Windows 10 or Windows 11, x64
