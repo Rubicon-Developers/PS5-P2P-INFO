@@ -41,7 +41,8 @@ PS5-P2PINFO는 적용되는 법률과 플랫폼 정책 및 서비스 약관을 �
 
 ## 지원 환경
 
-- Windows 10 또는 Windows 11 x64
+- [.NET 공식 지원 운영체제 목록](https://github.com/dotnet/core/blob/main/release-notes/10.0/supported-os.md)에 현재 포함된 Windows 11 x64 릴리스 — Windows 11 Home 빌드 26200 실제 기기에서 동작 확인
+- Windows 10 x64 — [.NET 공식 지원 운영체제 목록](https://github.com/dotnet/core/blob/main/release-notes/10.0/supported-os.md)에 현재 포함된 Enterprise 또는 LTSC 릴리스만 해당하며, 이 프로젝트에서는 Windows 10 실제 기기로 테스트하지 않음
 - 포트 미러링을 지원하는 공유기 또는 관리형 스위치
 - PS5 송신·수신 양방향 트래픽이 모니터링 PC로 미러링된 환경
 - **WinPcap API-compatible Mode**를 활성화하여 설치한 [Npcap](https://npcap.com/#download)
@@ -61,7 +62,7 @@ Npcap을 `Restrict Npcap driver's access to Administrators only`로 설치하면
 
 ### 1. 필요한 장비 준비
 
-- Windows 10 또는 Windows 11 x64 PC
+- 지원되는 x64 PC: 현재 지원되는 Windows 11 또는 .NET이 지원하는 Windows 10 Enterprise/LTSC 릴리스
 - 유선 LAN으로 연결할 PS5
 - 현재 사용 중인 Wi-Fi 공유기
 - [TP-Link TL-SG108E](https://www.tp-link.com/kr/business-networking/easy-smart-switch/tl-sg108e/) 8포트 기가비트 이지 스마트 스위치
@@ -92,7 +93,7 @@ TL-SG108E는 한국·일본·미국의 공식 제품 페이지에서 포트 미�
 
 ### 3. Npcap 설치
 
-PS5-P2PINFO는 유선 패킷을 수신하기 위해 Npcap이 필요합니다. Wireshark는 필요하지 않습니다. Npcap Free Edition은 재배포가 제한되므로 PS5-P2PINFO 설치 파일에 포함하지 않으며, 사용자가 공식 사이트에서 직접 설치해야 합니다.
+PS5-P2PINFO는 유선 패킷을 수신하기 위해 Npcap이 필요합니다. Wireshark는 필요하지 않습니다. Npcap은 PS5-P2PINFO 설치 파일에 포함하지 않으므로 사용자가 공식 사이트에서 직접 설치해야 합니다. Npcap Free Edition은 최대 5대 시스템에서 사용할 수 있고 외부 재배포는 허용되지 않습니다. 이 범위를 벗어나 사용하는 경우 [Npcap 공식 라이선스 안내](https://npcap.com/#download)를 확인하세요.
 
 1. [Npcap 공식 다운로드 페이지](https://npcap.com/#download)를 엽니다.
 2. **Downloading and Installing Npcap Free Edition**에서 최신 Npcap installer를 다운로드합니다.
@@ -305,7 +306,9 @@ PS5에는 Wi-Fi용 MAC 주소와 유선 LAN용 MAC 주소가 따로 있습니다
 
 ## 소스 및 라이선스
 
-이 저장소는 릴리스 바이너리와 문서만 배포합니다. 소스 코드는 공개하지 않으며 오픈 소스 라이선스를 부여하지 않습니다. Copyright © 2026 Rubicon Developers. All rights reserved.
+이 저장소는 릴리스 바이너리와 문서만 배포합니다. PS5-P2PINFO의 독점 소스 코드는 공개하지 않으며 Rubicon Developers가 소유한 코드에는 오픈 소스 라이선스를 부여하지 않습니다. Copyright © 2026 Rubicon Developers. All rights reserved.
+
+설치 파일에는 제3자 구성요소도 포함되어 있으며, 해당 구성요소에는 각각의 라이선스가 계속 적용됩니다. 이는 PS5-P2PINFO 자체 코드의 독점적 지위에 영향을 주지 않습니다. 관련 저작권, 라이선스 및 소스 제공 안내는 [THIRD-PARTY-NOTICES.txt](THIRD-PARTY-NOTICES.txt)를 확인하세요.
 
 ## 면책 고지
 

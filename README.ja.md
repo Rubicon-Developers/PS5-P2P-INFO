@@ -40,7 +40,8 @@ PS5-P2PINFOは、適用される法律、プラットフォームポリシーお
 
 ## 対応環境
 
-- Windows 10またはWindows 11 x64
+- [.NETの公式サポート対象OS](https://github.com/dotnet/core/blob/main/release-notes/10.0/supported-os.md)に現在含まれるWindows 11 x64リリース — Windows 11 Homeビルド26200の実機で動作確認済み
+- Windows 10 x64 — [.NETの公式サポート対象OS](https://github.com/dotnet/core/blob/main/release-notes/10.0/supported-os.md)に現在含まれるEnterpriseまたはLTSCリリースのみ。本プロジェクトではWindows 10実機で未テスト
 - ポートミラーリングに対応したルーターまたはマネージドスイッチ
 - PS5の送受信トラフィックが双方向とも監視PCへミラーリングされている環境
 - **WinPcap API-compatible Mode**を有効にしてインストールした[Npcap](https://npcap.com/#download)
@@ -60,7 +61,7 @@ Npcapを `Restrict Npcap driver's access to Administrators only` でインスト
 
 ### 1. 必要な機器を準備する
 
-- Windows 10またはWindows 11 x64 PC
+- 対応するx64 PC：現在サポート中のWindows 11、または.NETがサポートしているWindows 10 Enterprise/LTSCリリース
 - 有線LANで接続するPS5
 - 現在使用しているWi-Fiルーター
 - [TP-Link TL-SG108E](https://www.tp-link.com/jp/business-networking/easy-smart-switch/tl-sg108e/) 8ポート ギガビット イージースマートスイッチ
@@ -91,7 +92,7 @@ TL-SG108Eは、日本・韓国・米国の公式製品ページでポートミ�
 
 ### 3. Npcapをインストールする
 
-PS5-P2PINFOが有線パケットを受信するにはNpcapが必要です。Wiresharkは必要ありません。Npcap Free Editionは再配布に制限があるため、PS5-P2PINFOのインストーラーには含まれていません。ユーザー自身が公式サイトから直接インストールしてください。
+PS5-P2PINFOが有線パケットを受信するにはNpcapが必要です。Wiresharkは必要ありません。NpcapはPS5-P2PINFOのインストーラーに含まれていないため、ユーザー自身が公式サイトから直接インストールしてください。Npcap Free Editionは最大5台のシステムで利用でき、外部への再配布は許可されていません。この範囲を超えて利用する場合は、[Npcapの公式ライセンス情報](https://npcap.com/#download)をご確認ください。
 
 1. [Npcap公式ダウンロードページ](https://npcap.com/#download)を開きます。
 2. **Downloading and Installing Npcap Free Edition**から最新のNpcap installerをダウンロードします。
@@ -304,7 +305,9 @@ PS5には、Wi-Fi用と有線LAN用で別々のMACアドレスがあります。
 
 ## ソースとライセンス
 
-このリポジトリでは、リリースバイナリとドキュメントのみを配布します。ソースコードは公開しておらず、オープンソースライセンスも付与していません。Copyright © 2026 Rubicon Developers. All rights reserved.
+このリポジトリでは、リリースバイナリとドキュメントのみを配布します。PS5-P2PINFOのプロプライエタリなソースコードは公開しておらず、Rubicon Developersが所有するコードにはオープンソースライセンスを付与していません。Copyright © 2026 Rubicon Developers. All rights reserved.
+
+インストーラーにはサードパーティ製コンポーネントも含まれており、各コンポーネントにはそれぞれのライセンスが引き続き適用されます。これはPS5-P2PINFO独自コードのプロプライエタリな位置付けを変更するものではありません。該当する著作権、ライセンスおよびソース入手先の案内については、[THIRD-PARTY-NOTICES.txt](THIRD-PARTY-NOTICES.txt)をご確認ください。
 
 ## 免責事項
 

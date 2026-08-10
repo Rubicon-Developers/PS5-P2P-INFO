@@ -1,0 +1,127 @@
+PS5-P2PINFO Third-Party Software Notices
+=========================================
+
+PS5-P2PINFO proprietary code
+-----------------------------
+
+Copyright (c) 2026 Rubicon Developers. All rights reserved.
+
+No source-code or open-source license is granted for the proprietary portions
+of PS5-P2PINFO. This statement does not restrict any rights granted for the
+third-party components identified below. Each third-party component remains
+subject to its own license.
+
+
+1. PacketDotNet 1.4.8
+---------------------
+
+License: Mozilla Public License 2.0 (MPL-2.0)
+NuGet package: https://www.nuget.org/packages/PacketDotNet/1.4.8
+Project: https://github.com/dotpcap/packetnet
+Exact source used by the package:
+https://github.com/dotpcap/packetnet/tree/690707ce56d6e9c266daf6236c4f76ac5035334c
+
+PS5-P2PINFO consumes the unmodified PacketDotNet 1.4.8 NuGet package. The
+corresponding source code is available at the exact commit above at no charge.
+PacketDotNet's full MPL-2.0 text is installed as:
+
+    licenses\PacketDotNet-1.4.8-MPL-2.0.txt
+
+The MPL applies to PacketDotNet, not to the separate proprietary
+PS5-P2PINFO source files.
+
+
+2. SharpPcap 6.3.1
+------------------
+
+License: MIT
+Copyright (c) Tamir Gal, Chris Morgan, Ayoub Kaanich, Noah Potash,
+Phillip Lemon, Evan Plaice
+NuGet package: https://www.nuget.org/packages/SharpPcap/6.3.1
+Project: https://github.com/dotpcap/sharppcap
+Exact package source:
+https://github.com/dotpcap/sharppcap/tree/bfedf297e7410ffcf44e05d14f7fbef304f20895
+
+The complete notice and license are installed as:
+
+    licenses\SharpPcap-6.3.1-MIT.txt
+
+
+3. Microsoft .NET 10.0.10 and Windows Desktop (WPF) 10.0.10
+----------------------------------------------------------------
+
+PS5-P2PINFO is published as a self-contained Windows application. The
+published executable contains portions of the Microsoft .NET runtime and
+Windows Desktop runtime.
+
+Runtime package versions: 10.0.10 (win-x64 or win-arm64, as applicable)
+Runtime package repository commit:
+https://github.com/dotnet/dotnet/tree/f7d90799ce4ef09a0bb257852a57248d2a8fb8dd
+
+The following Microsoft terms and notices are installed:
+
+    licenses\Microsoft-dotnet-Library-License.txt
+    licenses\Microsoft-dotnet-runtime-10.0.10-MIT.txt
+    licenses\Microsoft-dotnet-runtime-10.0.10-ThirdPartyNotices.txt
+    licenses\Microsoft-WPF-10.0.10-MIT.txt
+    licenses\Microsoft-WPF-10.0.10-ThirdPartyNotices.txt
+    licenses\Microsoft-Windows-SDK-License.txt
+    licenses\Microsoft-Windows-SDK-License.rtf
+
+The .NET Library License is included for the Microsoft Windows .NET product
+distribution. The runtime-pack and WPF package metadata and accompanying
+license files identify those packages as MIT-licensed. The source license
+copies and third-party notices are provided without changing whichever
+Microsoft terms apply to a particular binary component.
+
+The win-x64 Windows Desktop runtime also includes D3DCompiler_47_cor3.dll.
+Microsoft identifies that file as being governed by the Windows SDK License.
+The win-arm64 Windows Desktop runtime pack 10.0.10 does not contain that DLL;
+the Windows SDK terms are nevertheless included in both installer variants so
+that the installed notice set remains complete and consistent.
+
+Microsoft-Windows-SDK-License.rtf is an unmodified copy of the official terms
+installed with Windows SDK 10.0.22621.0 (SHA-256:
+0F4A26AC9DC50066F8A1BFEAAF3F092D1B9E4791DF5487B9F3C31E7C3DC4D7F5).
+Microsoft-Windows-SDK-License.txt is a plain-text rendering of the same RTF.
+
+Official license information:
+https://github.com/dotnet/core/blob/main/license-information.md
+https://github.com/dotnet/core/blob/main/license-information-windows.md
+https://learn.microsoft.com/legal/windows-sdk/license
+
+
+4. Inno Setup 6
+---------------
+
+The PS5-P2PINFO installer is built with Inno Setup 6.
+Copyright (c) 1997-2026 Jordan Russell. All rights reserved.
+Portions Copyright (c) 2000-2026 Martijn Laan. All rights reserved.
+
+The Inno Setup license is installed as:
+
+    licenses\Inno-Setup-6-License.txt
+
+Official site: https://jrsoftware.org/isinfo.php
+
+
+5. Npcap (separate prerequisite; not included)
+------------------------------------------------
+
+Npcap is not included in, bundled with, or redistributed by PS5-P2PINFO.
+Packet capture requires the user to obtain and install Npcap separately from
+the official Npcap site:
+
+    https://npcap.com/#download
+
+Npcap is governed by its own license, including the Npcap Free Edition usage
+and redistribution limits. This PS5-P2PINFO distribution grants no rights to
+Npcap and must not be treated as a redistribution of Npcap.
+
+
+No endorsement
+--------------
+
+Third-party names and links are provided only for attribution, license
+compliance, and source availability. They do not imply sponsorship or
+endorsement of PS5-P2PINFO.

@@ -43,7 +43,8 @@ PS5-P2PINFO is designed with the intention of respecting and complying with appl
 
 ## Supported environment
 
-- Windows 10 or Windows 11, x64
+- A currently supported Windows 11 x64 release listed in the [.NET supported OS policy](https://github.com/dotnet/core/blob/main/release-notes/10.0/supported-os.md) — verified on Windows 11 Home build 26200
+- Windows 10 x64 — only Enterprise or LTSC releases currently listed in the [.NET supported OS policy](https://github.com/dotnet/core/blob/main/release-notes/10.0/supported-os.md); not tested by this project on physical Windows 10 hardware
 - A router or managed switch that supports port mirroring
 - Both PS5 traffic directions mirrored to the monitoring PC
 - [Npcap](https://npcap.com/#download) installed with **WinPcap API-compatible Mode** enabled
@@ -63,7 +64,7 @@ This guide uses the most broadly compatible setup: your **existing Wi-Fi router 
 
 ### 1. Gather the required equipment
 
-- A Windows 10 or Windows 11 x64 PC
+- A supported x64 PC: a current Windows 11 release, or a Windows 10 Enterprise/LTSC release currently supported by .NET
 - A PS5 connected by wired LAN
 - Your existing Wi-Fi router
 - A [TP-Link TL-SG108E](https://www.tp-link.com/us/business-networking/easy-smart-switch/tl-sg108e/) 8-port Gigabit Easy Smart Switch
@@ -94,7 +95,7 @@ Port mirroring is different from port forwarding. A router or switch that only a
 
 ### 3. Install Npcap
 
-PS5-P2PINFO uses Npcap to receive packets from the wired Ethernet adapter. Wireshark is not required. The free Npcap installer is not bundled with PS5-P2PINFO, so install it directly from the official website.
+PS5-P2PINFO uses Npcap to receive packets from the wired Ethernet adapter. Wireshark is not required. Npcap is not bundled with PS5-P2PINFO; install it directly from the official website. Npcap Free Edition is licensed for use on up to five systems and may not be externally redistributed. For use outside that scope, review the [official Npcap licensing information](https://npcap.com/#download).
 
 1. Open the [official Npcap download page](https://npcap.com/#download).
 2. Under **Downloading and Installing Npcap Free Edition**, download the latest Npcap installer.
@@ -307,7 +308,9 @@ The PC can use Wi-Fi or a second network adapter for its normal Internet connect
 
 ## Source and license
 
-This repository distributes release binaries and documentation only. The source code is not published, and no open-source license is granted. Copyright © 2026 Rubicon Developers. All rights reserved.
+This repository distributes release binaries and documentation only. The proprietary PS5-P2PINFO source code is not published, and no open-source license is granted for code owned by Rubicon Developers. Copyright © 2026 Rubicon Developers. All rights reserved.
+
+The installer also contains third-party components. Those components remain subject to their respective licenses; this does not change the proprietary status of PS5-P2PINFO's own code. See [THIRD-PARTY-NOTICES.txt](THIRD-PARTY-NOTICES.txt) for the applicable copyright, license, and source-availability notices.
 
 ## Disclaimer
 

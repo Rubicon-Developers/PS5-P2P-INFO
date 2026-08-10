@@ -1,0 +1,112 @@
+PS5-P2PINFO END USER LICENSE TERMS
+=================================
+
+Copyright (c) 2026 Rubicon Developers. All rights reserved.
+
+Please read these terms before installing or using PS5-P2PINFO. By installing
+or using the software, you accept these terms. If you do not accept them, do
+not install or use the software.
+
+1. PROPRIETARY SOFTWARE
+
+Except for the third-party components described in Section 5, PS5-P2PINFO and
+its proprietary executable code, user interface, documentation, and related
+materials are owned by Rubicon Developers and are licensed, not sold. No
+source-code license or open-source license is granted for those proprietary
+portions. All rights not expressly granted are reserved.
+
+2. LIMITED LICENSE
+
+Subject to these terms, Rubicon Developers grants you a limited,
+non-exclusive license to install and use the object-code release of
+PS5-P2PINFO on Windows devices that you own or control, for lawful purposes.
+
+3. RESTRICTIONS
+
+Except to the extent expressly permitted by applicable law or by a third-party
+license identified in Section 5, you may not:
+
+  a. copy, modify, adapt, translate, distribute, sublicense, sell, rent,
+     lease, or lend the proprietary portions of PS5-P2PINFO;
+  b. reverse engineer, decompile, disassemble, or otherwise attempt to derive
+     source code from the proprietary portions of PS5-P2PINFO;
+  c. remove or alter copyright, trademark, license, or attribution notices;
+  d. use Microsoft or other third-party names or trademarks in a way that
+     suggests sponsorship or endorsement; or
+  e. use the software for an unlawful, malicious, or deceptive purpose or in
+     violation of rights belonging to another person.
+
+Nothing in this section restricts a right that applicable law does not permit
+the publisher to restrict.
+
+4. PREREQUISITES AND THIRD-PARTY SERVICES
+
+PS5-P2PINFO requires Npcap for packet capture. Npcap is not included with or
+redistributed by PS5-P2PINFO. You must obtain Npcap separately from its
+official publisher and accept its separate license. PS5-P2PINFO does not grant
+you any right to use or redistribute Npcap.
+
+5. THIRD-PARTY COMPONENTS; CONTROLLING TERMS
+
+PS5-P2PINFO includes separately licensed third-party components. Their names,
+versions, source locations, notices, and license texts are provided in
+THIRD-PARTY-NOTICES.txt and the accompanying licenses directory.
+
+Those third-party components are governed solely by their respective license
+terms. Nothing in these PS5-P2PINFO terms limits, replaces, or overrides rights
+granted under a third-party license. If these terms conflict with a third-party
+license, the third-party license controls solely for the affected third-party
+component. In particular, the Mozilla Public License 2.0 applies to
+PacketDotNet, and the corresponding PacketDotNet source remains available as
+identified in THIRD-PARTY-NOTICES.txt.
+
+The x64 release includes the Microsoft D3DCompiler_47_cor3.dll component under
+the Windows SDK License. The applicable Windows SDK terms are supplied in the
+licenses directory. The ARM64 runtime pack used for this release does not
+contain that component.
+
+For Microsoft components governed by the .NET Library License or Windows SDK
+License, and only to the extent required by those Microsoft terms, you may not
+separate or redistribute those components as a standalone product, alter their
+notices, use Microsoft trademarks to suggest endorsement, use Windows SDK
+Distributable Code on a non-Microsoft operating system, include it in malicious
+or unlawful software, work around its technical limitations, rent or lease it,
+or reverse engineer it except to the extent applicable law expressly permits.
+Those Microsoft components are provided as-is and without support from
+Microsoft, subject to the complete Microsoft terms supplied in the licenses
+directory. This paragraph does not limit rights granted under the MIT license
+or another open-source license and applies only to components that Microsoft's
+official license information identifies as subject to the .NET Library License
+or Windows SDK License.
+
+6. NO AFFILIATION OR ENDORSEMENT
+
+PS5-P2PINFO is an independent project. It is not affiliated with, sponsored
+by, or endorsed by Sony Interactive Entertainment, FromSoftware, Microsoft,
+the Npcap Project, or the authors of any third-party component.
+
+7. NO WARRANTY
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, PS5-P2PINFO IS PROVIDED
+"AS IS" AND "AS AVAILABLE," WITHOUT EXPRESS OR IMPLIED WARRANTIES, INCLUDING
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND
+NON-INFRINGEMENT. YOU BEAR THE RISK OF USING THE SOFTWARE. THIS SECTION DOES
+NOT EXCLUDE A WARRANTY OR CONSUMER RIGHT THAT CANNOT LAWFULLY BE EXCLUDED.
+
+8. LIMITATION OF LIABILITY
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, RUBICON DEVELOPERS WILL NOT
+BE LIABLE FOR INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE
+DAMAGES, OR FOR LOSS OF DATA, PROFITS, REVENUE, OR BUSINESS OPPORTUNITY,
+ARISING FROM OR RELATED TO THE SOFTWARE. THIS SECTION DOES NOT LIMIT LIABILITY
+THAT CANNOT LAWFULLY BE LIMITED.
+
+9. ENTIRE TERMS AND SEVERABILITY
+
+These terms, together with the third-party terms that apply to their respective
+components, state the terms for this release. If a provision is unenforceable,
+it will be applied to the maximum lawful extent and the remaining provisions
+will remain in effect.
+
+Third-party notices are installed with the software and are also available in
+the PS5-P2PINFO distribution.

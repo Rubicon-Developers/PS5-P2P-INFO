@@ -1,0 +1,2 @@
+# Preserve bundled third-party and application license texts byte for byte.
+licenses/** -text whitespace=-trailing-space
