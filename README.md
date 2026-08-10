@@ -69,7 +69,7 @@ This guide uses the most broadly compatible setup: your **existing Wi-Fi router 
 - Your existing Wi-Fi router
 - A [TP-Link TL-SG108E](https://www.tp-link.com/us/business-networking/easy-smart-switch/tl-sg108e/) 8-port Gigabit Easy Smart Switch
 - Three Cat5e-or-better Ethernet cables
-- A USB Gigabit Ethernet adapter if the PC does not have a wired Ethernet port
+- A USB Gigabit Ethernet adapter for the dedicated capture connection if the PC has no wired Ethernet port. Even when the PC has a wired port, an **extra/spare adapter** is convenient if you want to keep the PC's existing wired Internet connection while capturing. If the PC uses Wi-Fi for its normal connection, one Ethernet adapter is sufficient for capture.
 
 TP-Link lists Layer 2 port mirroring on the regional product pages below. The same Easy Smart Configuration Utility and official guide can be used for this setup.
 
@@ -304,7 +304,7 @@ Selecting **Start Capture** also saves the current settings automatically. Use *
 
 #### The PC also needs Internet access while capturing
 
-The PC can use Wi-Fi or a second network adapter for its normal Internet connection while the port 8 Ethernet adapter is used for capture. Do not enable Windows Network Bridge or Internet Connection Sharing on the capture adapter.
+PS5-P2PINFO calculates Ping passively from mirrored PS5 traffic, so the monitoring PC does not need its own Internet connection or a second adapter merely to display Ping. Keep the adapter connected to TL-SG108E port 8 dedicated to capture. To run a separate ping test or use the PC's normal Internet connection at the same time, use Wi-Fi or a second, spare Ethernet adapter. Do not enable Windows Network Bridge or Internet Connection Sharing on the capture adapter.
 
 ## Source and license
 

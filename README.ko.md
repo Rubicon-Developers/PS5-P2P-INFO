@@ -67,7 +67,7 @@ Npcap을 `Restrict Npcap driver's access to Administrators only`로 설치하면
 - 현재 사용 중인 Wi-Fi 공유기
 - [TP-Link TL-SG108E](https://www.tp-link.com/kr/business-networking/easy-smart-switch/tl-sg108e/) 8포트 기가비트 이지 스마트 스위치
 - Cat5e 이상 LAN 케이블 3개
-- PC에 유선 LAN 포트가 없다면 USB 기가비트 Ethernet 어댑터 1개
+- 캡처 전용 **USB 기가비트 Ethernet 어댑터 1개** — PC에 유선 LAN 포트가 없다면 필요합니다. 이미 유선 포트가 있어도, 캡처 중 PC의 기존 유선 인터넷 연결을 유지하려면 **추가(여분) 어댑터**로 사용하면 편리합니다. PC가 일반 인터넷 연결에 Wi-Fi를 사용한다면 캡처용 Ethernet 어댑터 1개만으로 충분합니다.
 
 TL-SG108E는 한국·일본·미국의 공식 제품 페이지에서 포트 미러링 지원이 확인되며, 같은 공식 설정 유틸리티를 사용할 수 있습니다.
 
@@ -302,7 +302,7 @@ PS5에는 Wi-Fi용 MAC 주소와 유선 LAN용 MAC 주소가 따로 있습니다
 
 #### 캡처 중 PC에서 인터넷을 사용하기 어려움
 
-모니터링 PC는 TL-SG108E 8번 포트에 연결된 Ethernet을 캡처용으로 사용하면서 Wi-Fi를 일반 인터넷 연결로 함께 사용할 수 있습니다. Windows 네트워크 브리지나 인터넷 연결 공유는 켜지 마세요.
+PS5-P2PINFO의 Ping은 미러링된 PS5 트래픽에서 수동으로 계산되므로, Ping 표시 자체에는 모니터링 PC의 인터넷 연결이나 두 번째 어댑터가 필요하지 않습니다. TL-SG108E 8번 포트에 연결한 어댑터는 캡처 전용으로 사용하세요. 캡처 중 PC에서 별도의 ping 테스트를 실행하거나 일반 인터넷도 사용하려면 Wi-Fi 또는 두 번째 **여분 Ethernet 어댑터**를 사용하세요. 캡처 어댑터에는 Windows 네트워크 브리지나 인터넷 연결 공유를 켜지 마세요.
 
 ## 소스 및 라이선스
 
