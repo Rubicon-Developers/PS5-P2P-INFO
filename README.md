@@ -23,10 +23,13 @@ The installer is currently unsigned, so Windows SmartScreen may show a warning. 
 ## Features
 
 - Pilot-name monitoring
-- Ping and RTT jitter measurements
+- Estimated Ping and RTT jitter
 - Recent RTT spike diagnostics
 - Packet-gap diagnostics
 - Configurable display and capture settings
+
+> [!NOTE]
+> Ping and RTT jitter are reference estimates calculated from the timing of mirrored PS5 packets. Because this method differs from a direct ping test run on a PC or console, the results may not match and should not be treated as equally precise latency measurements. Use them only to observe approximate trends and changes in connection quality.
 
 ## Policies and Terms
 
