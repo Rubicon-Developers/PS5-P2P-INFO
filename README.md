@@ -22,7 +22,7 @@ The installer is currently unsigned, so Windows SmartScreen may show a warning. 
 
 ## Features
 
-- Pilot-name monitoring
+- Pilot-name monitoring (unavailable names display `-`; Ping still works)
 - Estimated Ping and RTT jitter
 - Recent RTT spike diagnostics
 - Packet-gap diagnostics

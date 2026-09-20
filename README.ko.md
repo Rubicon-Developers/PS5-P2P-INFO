@@ -22,7 +22,7 @@ PS5-P2PINFO는 미러링된 PS5 유선 LAN 트래픽을 이용해 Armored Core�
 
 ## 주요 기능
 
-- 파일럿 이름 모니터링
+- 파일럿 이름 모니터링 (이름을 추출하지 못하면 `-`로 표시하며 Ping은 계속 측정)
 - Ping 및 RTT Jitter 추정값
 - 최근 RTT Spike 진단
 - Packet Gap 진단
