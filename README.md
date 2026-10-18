@@ -4,6 +4,12 @@
 
 PS5-P2PINFO is a Windows monitoring tool for Armored Core peer traffic captured from a mirrored PS5 LAN port.
 
+## Demo video
+
+Watch the pre-match introduction OCR fill in the opponent's Pilot Name and PSN ID while connection monitoring continues. Press Play to watch.
+
+https://github.com/user-attachments/assets/407d5249-2e13-4ceb-be3f-f961211cb531
+
 ## Example screen
 
 ![PS5-P2PINFO monitoring example](assets/example.png)

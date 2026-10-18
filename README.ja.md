@@ -4,6 +4,12 @@
 
 PS5-P2PINFOは、ミラーリングされたPS5の有線LANトラフィックを利用して、Armored CoreのP2P接続状態を監視するWindowsアプリケーションです。
 
+## デモ動画
+
+対戦開始前の紹介画面をOCRで読み取り、相手のパイロット名とPSN IDを表示しながら接続状態を監視する様子です。再生ボタンを押してご覧ください。
+
+https://github.com/user-attachments/assets/407d5249-2e13-4ceb-be3f-f961211cb531
+
 ## 画面例
 
 ![PS5-P2PINFO モニタリング画面の例](assets/example.png)
