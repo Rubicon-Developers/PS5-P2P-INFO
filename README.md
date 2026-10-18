@@ -59,6 +59,8 @@ The source is requested at 1920×1080 with aspect ratio preserved; no projector 
 
 Settings, `ocr-settings.json` and `history.json` are stored under `%LOCALAPPDATA%/PS5-P2PINFO`. History begins when recognizable match traffic is observed, then the same record is finalized after inactivity or capture stop. A crash leaves an `Interrupted` record on the next launch. Confirmed identities survive finalization; different matches and pilot aliases remain separate. History does not infer the next opponent from an IP address. Use **Open History Folder** to locate your records. Keep the installed `OcrData` folder beside the executable; no Python or separate OCR download is required.
 
+Since 1.1.1, History saves **Jitter Avg / Min / Max** (ms) for each completed match. It aggregates each complete 60-second jitter value once per new RTT sample: Avg is their arithmetic mean, and Min/Max are the smallest/largest values observed. `Collecting`, stale values and repeated screen refreshes do not count. Earlier measurements survive a gap. The summary is accumulated in memory and saved at match completion or capture stop; an abrupt exit can lose the unfinished summary. Existing records are preserved; old or too-short matches without these statistics show `-`, not zero. A legacy single value cannot reconstruct the three statistics.
+
 ![History with synthetic sample data](assets/history.png)
 ![OBS configuration without personal settings](assets/obs-config.png)
 
