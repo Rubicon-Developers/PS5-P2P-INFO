@@ -10,12 +10,6 @@ PS5-P2PINFOは、ミラーリングされたPS5の有線LANトラフィックを
 
 https://github.com/user-attachments/assets/407d5249-2e13-4ceb-be3f-f961211cb531
 
-## 画面例
-
-![PS5-P2PINFO モニタリング画面の例](assets/example.png)
-
-1.1.0のUIに架空の名前と測定値を表示した例です。
-
 ## ダウンロード
 
 - [最新リリースページ](https://github.com/Rubicon-Developers/PS5-P2P-INFO/releases/latest)

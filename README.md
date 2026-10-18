@@ -10,12 +10,6 @@ Watch the pre-match introduction OCR fill in the opponent's Pilot Name and PSN I
 
 https://github.com/user-attachments/assets/407d5249-2e13-4ceb-be3f-f961211cb531
 
-## Example screen
-
-![PS5-P2PINFO monitoring example](assets/example.png)
-
-Version 1.1.0 UI preview with synthetic sample identities and measurements.
-
 ## Download
 
 - [Latest release page](https://github.com/Rubicon-Developers/PS5-P2P-INFO/releases/latest)

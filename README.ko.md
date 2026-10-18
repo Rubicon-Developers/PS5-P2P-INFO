@@ -10,12 +10,6 @@ PS5-P2PINFO는 미러링된 PS5 유선 LAN 트래픽을 이용해 Armored Core�
 
 https://github.com/user-attachments/assets/407d5249-2e13-4ceb-be3f-f961211cb531
 
-## 예시 화면
-
-![PS5-P2PINFO 모니터링 예시](assets/example.png)
-
-1.1.0 UI에 가상의 이름과 측정값을 표시한 예시입니다.
-
 ## 다운로드
 
 - [최신 릴리스 페이지](https://github.com/Rubicon-Developers/PS5-P2P-INFO/releases/latest)
