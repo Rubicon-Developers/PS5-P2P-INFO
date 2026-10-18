@@ -53,7 +53,8 @@ The source is requested at 1920×1080 with aspect ratio preserved; no projector 
 - Standard installations use `%APPDATA%/obs-studio/plugin_config/obs-websocket/config.json`. The local port and password are read from that file; the app does not copy them into its settings or logs. Do not send your password to anyone.
 - For portable or nonstandard OBS, use **OBS settings file → Browse...** to select that installation's WebSocket `config.json` (normally `config/obs-studio/plugin_config/obs-websocket/config.json` under the portable OBS folder). Save and reconnect. Leave this field empty for standard OBS.
 - Remote OBS on another PC is not supported. A changed or missing source must be selected again. Black/cropped video must be corrected in OBS before calibration.
-- If your own ID is missing or appears twice, the app leaves the opponent unconfirmed. Check **My PSN ID**, video quality and the six calibration regions. It never assumes Self from the left/right position.
+
+Since 1.1.2, a missing/invalid **My PSN ID**, an OCR mismatch or a duplicate Self appears as an amber notice above the tabs, without an error popup. Network monitoring and match statistics continue; uncertain OCR identities are not saved over confirmed ones. Check the configured ID and OBS image. IDs must match exactly (case-insensitive); similar characters are never guessed. Automatic introductions can retry within the original 90-second window. After that, correct and **Save Config**, then use **OCR Selected Match** on the result screen. Editing the ID does not silently save an earlier OCR preview.
 
 ### History and local files
 
