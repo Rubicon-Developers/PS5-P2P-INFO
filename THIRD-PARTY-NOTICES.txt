@@ -125,3 +125,13 @@ No endorsement
 Third-party names and links are provided only for attribution, license
 compliance, and source availability. They do not imply sponsorship or
 endorsement of PS5-P2PINFO.
+
+
+6. Local OCR components (added in 1.1.0)
+----------------------------------------
+Microsoft ONNX Runtime 1.31.0 (MIT), PaddleOCR models (Apache-2.0),
+and RapidOCR 3.10.0 ONNX conversions (Apache-2.0) are included.
+See licenses/OCR-NOTICES.txt for model source URLs and exact SHA256 values,
+licenses/ONNX-Runtime-LICENSE.txt, licenses/ONNX-Runtime-ThirdPartyNotices.txt,
+licenses/PaddleOCR-Apache-2.0.txt and licenses/RapidOCR-LICENSE.txt.
+OBS Studio is a separate optional prerequisite, not bundled.

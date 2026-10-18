@@ -1,0 +1,35 @@
+PS5-P2PINFO 1.1.0 OCR dependencies
+
+All pilot names, AC names and PSN IDs use local PaddleOCR model inference.
+No Tesseract, Windows OCR, Python process or cloud OCR is used at runtime.
+
+PaddleOCR upstream models: Copyright PaddlePaddle Authors / Baidu and applicable
+PaddleOCR rights holders. Apache License 2.0 (PaddleOCR-Apache-2.0.txt).
+https://github.com/PaddlePaddle/PaddleOCR
+
+ONNX model conversions and preprocessing reference: RapidOCR 3.10.0,
+Copyright RapidOCR Authors. Apache License 2.0 (RapidOCR-LICENSE.txt).
+C# resizing and CTC decoding in PaddleTextRecognizer.cs implement the equivalent
+pipeline; the Python package itself is not shipped.
+https://github.com/RapidAI/RapidOCR/tree/v3.10.0
+
+Model distribution prefix:
+https://www.modelscope.cn/models/RapidAI/RapidOCR/resolve/v3.10.0/onnx/
+
+English (also used for all PSN IDs): PP-OCRv5/rec/en_PP-OCRv5_rec_mobile.onnx
+SHA256: c3461add59bb4323ecba96a492ab75e06dda42467c9e3d0c18db5d1d21924be8
+Korean names: PP-OCRv5/rec/korean_PP-OCRv5_rec_mobile.onnx
+SHA256: cd6e2ea50f6943ca7271eb8c56a877a5a90720b7047fe9c41a2e541a25773c9b
+Japanese names: PP-OCRv4/rec/japan_PP-OCRv4_rec_mobile.onnx
+SHA256: e1075a67dba758ecfc7ebc78a10ae61c95ac8fb66a9c86fab5541e33f085cb7a
+
+Text detection within each calibrated field: PP-OCRv5/det/ch_PP-OCRv5_det_mobile.onnx
+SHA256: 4d97c44a20d30a81aad087d6a396b08f786c4635742afc391f6621f5c6ae78ae
+PaddleTextDetector.cs uses local ONNX inference, BGR normalization and DB map
+thresholding. Its horizontal connected-component boxes, result-card color
+selection and original-color margin cropping are application-specific; no
+Python, OpenCV or polygon library is shipped for detection.
+
+Microsoft ONNX Runtime 1.31.0: Copyright Microsoft Corporation. MIT License.
+https://github.com/microsoft/onnxruntime
+See ONNX-Runtime-LICENSE.txt and ONNX-Runtime-ThirdPartyNotices.txt.

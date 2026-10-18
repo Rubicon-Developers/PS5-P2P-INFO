@@ -8,7 +8,7 @@ PS5-P2PINFO는 미러링된 PS5 유선 LAN 트래픽을 이용해 Armored Core�
 
 ![PS5-P2PINFO 모니터링 예시](assets/example.png)
 
-이 이미지의 PS5 MAC 주소는 마스킹되어 있습니다.
+1.1.0 UI에 가상의 이름과 측정값을 표시한 예시입니다.
 
 ## 다운로드
 
@@ -22,14 +22,45 @@ PS5-P2PINFO는 미러링된 PS5 유선 LAN 트래픽을 이용해 Armored Core�
 
 ## 주요 기능
 
-- 파일럿 이름 모니터링
-- Ping 및 RTT Jitter 추정값
-- 최근 RTT Spike 진단
-- Packet Gap 진단
-- 화면 및 캡처 설정 조정
+- 파일럿 이름·PSN ID와 Ping, RTT Jitter, 경기 전체 누적 Packet Loss 모니터링. 이름을 읽지 못하면 `-`로 표시하고 네트워크 측정은 계속합니다.
+- 선택적 OBS 연동과 영어·한국어·일본어 로컬 PaddleOCR
+- 경기 전 소개 화면 자동 인식, 결과 화면은 **OCR Selected Match** 버튼으로 인식
+- 시작 시각·신원·완료 상태·연결 추정치를 저장하는 History와 **Edit Identity...** 수정 기능
+- 상대 IP·대역·포트 표시, IP Map, IP 검색 및 IP 기반 신원 추정 없음. 히스토리에도 네트워크 주소를 저장하지 않습니다.
+
+`RTT Jitter`는 최근 60초 안에 있는 인접한 원본 RTT 값의 절대 차이 평균입니다. 최소 6개 표본(5개 변화량)이 필요해 처음에는 `Collecting`이 표시되며, 보통 약 50초간 수집할 수 있습니다. 오래된 완성 값에는 `stale`이 표시됩니다. Packet Loss는 읽을 수 있는 게임 패킷의 순번 누락을 사용하고, 불가능하면 probe 응답 시간 초과를 이용하여 경기 전체에 누적합니다.
 
 > [!NOTE]
-> Ping과 RTT Jitter는 미러링된 PS5 패킷의 요청·응답 시점을 바탕으로 계산한 **참고용 추정치**입니다. PC나 콘솔에서 직접 수행하는 일반적인 ping 테스트와 측정 방식이 달라 결과가 일치하지 않을 수 있으며, 같은 수준의 정확한 지연 시간 측정값으로 보아서는 안 됩니다. 수치 자체보다는 연결 상태의 대략적인 경향과 변화를 확인하는 용도로만 사용하세요.
+> 미러링된 PS5 트래픽에서 계산한 참고용 추정치이며 콘솔의 직접 측정값은 아닙니다. RTT에는 왕복 경로와 상대 응답 처리 시간이 포함됩니다. 미러링·어댑터·PC의 캡처 누락도 손실률에 영향을 주며, probe 사이의 짧은 끊김은 놓칠 수 있습니다.
+
+## OBS 연동 및 OCR 설정 (선택)
+
+OBS 없이도 네트워크 모니터링은 가능합니다. OCR에는 HDMI/USB 캡처 장치 등을 통해 PS5 게임 영상이 **같은 Windows PC·사용자 계정의 OBS**에 들어와야 합니다.
+
+1. [OBS Studio](https://obsproject.com/download) 28 이상을 설치합니다. **소스 → + → 비디오 캡처 장치**에서 게임 영상을 추가하거나 기존 게임 영상 소스를 사용합니다. 게임 화면 전체가 가려지거나 잘리지 않고 나오는지 확인합니다.
+2. OBS의 **도구 → WebSocket 서버 설정**에서 **WebSocket 서버 활성화**를 켜고, 인증은 켠 상태로 설정을 적용합니다. OBS 28부터 WebSocket이 내장되어 있습니다. [OBS 공식 안내](https://obsproject.com/kb/remote-control-guide)를 참고하세요.
+3. PS5-P2PINFO의 **Config → OBS & OCR → My PSN ID**에 자신의 온라인 ID를 입력하고 **Save Config**를 누릅니다.
+4. **Connect OBS**를 누르고 목록에서 게임 캡처 소스를 직접 선택합니다. 특정 언어의 소스명이나 장치명을 가정하지 않습니다. 선택한 소스는 저장되며 다음 연결 시 같은 소스가 있으면 재사용합니다.
+5. **Automatically read pre-match introductions**를 켠 상태에서 다음 경기 전에 **Start Capture**를 누릅니다. 새 매치 후 최대 90초 동안 메모리에서 소개 카드를 확인하며, 양쪽 카드가 안정적으로 읽히고 본인 ID가 정확히 하나와 일치하면 자동 인식을 멈춥니다. **커스텀매치 등에서 패킷으로 파일럿 이름이 식별되면 해당 매치는 자동 OCR을 하지 않습니다. 이름 패킷이 나중에 도착해도 자동 인식을 중단합니다.**
+6. 결과 화면은 OBS에 띄운 상태에서 **History의 해당 경기 선택 → OCR Selected Match**를 누릅니다. 결과 화면은 자동으로 읽지 않습니다. OCR 도중 다른 행을 선택해도 처음 선택한 경기에 저장합니다. 커스텀매치도 수동 OCR 버튼은 사용할 수 있습니다.
+7. 오인식이 있으면 결과 화면을 띄우고 **Config → Calibrate Regions...**를 엽니다. 파일럿·기체명 언어를 English/Korean/Japanese 중에서 선택하고 여섯 영역을 조정한 뒤 **Save Regions**를 누릅니다. PSN ID는 항상 영어 모델을 사용합니다. History의 **Edit Identity...**로 직접 수정할 수도 있습니다.
+
+원본 소스를 종횡비를 유지한 1920×1080으로 요청하므로 프로젝터 창이나 방송·녹화는 필요하지 않습니다. 포함된 모델로 PC 안에서 처리하며 스크린샷 파일을 저장하지 않습니다. 자동 인식은 지원하는 단일 매치 소개 배치 기준입니다. 팀전·다른 배치·소개 화면을 놓친 경우 결과 OCR 버튼을 사용하세요. 동시에 여러 매치가 감지되면 해당 매치들의 자동 연결을 하지 않습니다.
+
+### OBS 연결 문제 해결
+
+- OBS와 WebSocket 서버가 실행 중인지 확인합니다. 소스나 설정을 바꿨다면 **Reconnect OBS**를 누릅니다.
+- 일반 설치는 `%APPDATA%/obs-studio/plugin_config/obs-websocket/config.json`에서 로컬 포트와 암호를 읽습니다. 암호를 앱 설정이나 로그에 복사하지 않으며, 타인에게 전달할 필요도 없습니다.
+- 포터블·비표준 설치는 **OBS settings file → Browse...**에서 해당 설치의 WebSocket `config.json`을 선택하고 저장·재연결합니다. 보통 포터블 OBS 폴더 안의 `config/obs-studio/plugin_config/obs-websocket/config.json`입니다. 일반 설치는 입력란을 비워 둡니다.
+- 다른 PC의 원격 OBS는 지원하지 않습니다. 소스가 삭제되거나 이름이 바뀌면 다시 선택하세요. 검은 화면이나 잘린 영상은 OBS에서 먼저 해결해야 합니다.
+- 본인 ID가 없거나 두 번 읽히면 상대를 확정하지 않습니다. **My PSN ID**, 영상 품질과 여섯 보정 영역을 확인하세요. 좌우 위치만으로 본인을 판단하지 않습니다.
+
+### 히스토리와 로컬 파일
+
+설정, `ocr-settings.json`, `history.json`은 `%LOCALAPPDATA%/PS5-P2PINFO`에 저장됩니다. 인식 가능한 매치 트래픽부터 행을 만들고, 비활성 시간 경과 또는 캡처 중지 시 같은 행을 완료 처리합니다. 비정상 종료한 행은 다음 실행 시 `Interrupted`로 표시합니다. 확정한 신원은 종료 시 유지하며 경기별 기록과 파일럿 이름 별칭은 구분됩니다. IP로 다음 상대를 추정하지 않습니다. **Open History Folder**로 기록 위치를 열 수 있습니다. 실행파일 옆의 `OcrData` 폴더를 유지하세요. Python이나 별도 OCR 다운로드는 필요하지 않습니다.
+
+![가상 데이터로 표시한 History](assets/history.png)
+![개인 설정이 없는 OBS 설정 화면](assets/obs-config.png)
 
 ## 관련 정책 및 약관
 

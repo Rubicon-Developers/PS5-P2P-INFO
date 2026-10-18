@@ -8,7 +8,7 @@ PS5-P2PINFO is a Windows monitoring tool for Armored Core peer traffic captured 
 
 ![PS5-P2PINFO monitoring example](assets/example.png)
 
-The PS5 MAC address is masked in this image.
+Version 1.1.0 UI preview with synthetic sample identities and measurements.
 
 ## Download
 
@@ -22,14 +22,45 @@ The installer is currently unsigned, so Windows SmartScreen may show a warning. 
 
 ## Features
 
-- Pilot-name monitoring
-- Estimated Ping and RTT jitter
-- Recent RTT spike diagnostics
-- Packet-gap diagnostics
-- Configurable display and capture settings
+- Monitor pilot names and PSN IDs with estimated Ping, RTT Jitter and whole-match Packet Loss. Unavailable names display `-`; network estimates continue.
+- Optional local OBS integration and PaddleOCR in English, Korean or Japanese.
+- Automatic pre-match introduction recognition; result screens are read with **OCR Selected Match**.
+- Local History with match start, identity, completion state and connection estimates. **Edit Identity...** corrects a selected record.
+- No peer IP, range or port display, IP Map, IP lookup or IP-based identity inference. History contains no network endpoints.
+
+`RTT Jitter` is the mean absolute change between adjacent matched raw RTT samples within 60 seconds. It needs at least six samples (five changes); `Collecting` is normal at first, often for about 50 seconds. An old complete estimate is labeled `stale`. Packet Loss accumulates over the whole match using readable game sequence gaps, or probe timeouts when those sequences are unavailable.
 
 > [!NOTE]
-> Ping and RTT jitter are reference estimates calculated from the timing of mirrored PS5 packets. Because this method differs from a direct ping test run on a PC or console, the results may not match and should not be treated as equally precise latency measurements. Use them only to observe approximate trends and changes in connection quality.
+> These are reference estimates from mirrored PS5 traffic, not direct console measurements. RTT includes both directions and peer response processing. Mirroring, adapter or PC capture drops can affect loss estimates; short disruptions between probes may be missed.
+
+## OBS and OCR setup (optional)
+
+Network monitoring works without OBS. OCR additionally needs the PS5 game video available in OBS on the **same Windows PC and user account**, for example through an HDMI/USB capture device.
+
+1. Install [OBS Studio](https://obsproject.com/download) 28 or later. Add your game video under **Sources → + → Video Capture Device**, or select your existing game video input. Check that it shows the complete, unobstructed game image.
+2. In OBS, open **Tools → WebSocket Server Settings**, enable **Enable WebSocket Server**, keep authentication enabled, and apply the settings. WebSocket support is built into OBS 28+. See the [official OBS guide](https://obsproject.com/kb/remote-control-guide).
+3. In PS5-P2PINFO **Config → OBS & OCR**, enter your own online ID in **My PSN ID** and select **Save Config**.
+4. Click **Connect OBS**, then explicitly select your game capture source from the list. Source names can be in any language; there is no preset device name. Your choice is saved and reused on the next connection if the source still exists.
+5. Leave **Automatically read pre-match introductions** checked, then **Start Capture** before the next match. The app checks introduction cards in memory for up to 90 seconds and stops once both cards are stable and your configured ID uniquely identifies Self. **If a pilot name is decoded from game packets, as in custom matches, automatic OCR is skipped for that match. A name decoded later also cancels automatic recognition.**
+6. For result screens, leave the result visible in OBS, select the correct **History** row, and click **OCR Selected Match**. Result screens are never scanned automatically. The selected match remains the target even if the table selection changes while reading. Manual OCR remains available for custom matches.
+7. If names are incorrect, keep the result screen visible and open **Config → Calibrate Regions...**. Select English, Korean or Japanese for pilot/AC names, adjust all six text boxes, and **Save Regions**. PSN IDs always use the English model. Use **Edit Identity...** in History for manual correction.
+
+The source is requested at 1920×1080 with aspect ratio preserved; no projector window, streaming or recording is required. OCR runs locally with bundled models. Images are processed in memory and are not saved. Auto recognition currently targets the supported single-match introduction layout; team matches, altered layouts or missed introductions may require manual result OCR. Multiple simultaneous matches disable automatic association for those matches.
+
+### OBS connection troubleshooting
+
+- Keep OBS running and its WebSocket server enabled. After changing OBS sources or settings, click **Reconnect OBS**.
+- Standard installations use `%APPDATA%/obs-studio/plugin_config/obs-websocket/config.json`. The local port and password are read from that file; the app does not copy them into its settings or logs. Do not send your password to anyone.
+- For portable or nonstandard OBS, use **OBS settings file → Browse...** to select that installation's WebSocket `config.json` (normally `config/obs-studio/plugin_config/obs-websocket/config.json` under the portable OBS folder). Save and reconnect. Leave this field empty for standard OBS.
+- Remote OBS on another PC is not supported. A changed or missing source must be selected again. Black/cropped video must be corrected in OBS before calibration.
+- If your own ID is missing or appears twice, the app leaves the opponent unconfirmed. Check **My PSN ID**, video quality and the six calibration regions. It never assumes Self from the left/right position.
+
+### History and local files
+
+Settings, `ocr-settings.json` and `history.json` are stored under `%LOCALAPPDATA%/PS5-P2PINFO`. History begins when recognizable match traffic is observed, then the same record is finalized after inactivity or capture stop. A crash leaves an `Interrupted` record on the next launch. Confirmed identities survive finalization; different matches and pilot aliases remain separate. History does not infer the next opponent from an IP address. Use **Open History Folder** to locate your records. Keep the installed `OcrData` folder beside the executable; no Python or separate OCR download is required.
+
+![History with synthetic sample data](assets/history.png)
+![OBS configuration without personal settings](assets/obs-config.png)
 
 ## Policies and Terms
 
