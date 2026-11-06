@@ -1,8 +1,18 @@
-# PS5-P2PINFO
+﻿# PS5-P2PINFO
 
 **English** | [한국어](README.ko.md) | [日本語](README.ja.md)
 
 PS5-P2PINFO is a Windows monitoring tool for Armored Core peer traffic captured from a mirrored PS5 LAN port.
+
+
+## Arrival Ratio P95 (1.1.3)
+
+`Arrival Ratio P95` compares each received game-channel packet interval with its recent typical interval (a rolling 2-second median). `1.18x` means approximately 95% of measured intervals were no more than 1.18 times their corresponding typical interval. It is not ping, an average, or a confirmed lag score; lower values indicate less upper-tail arrival variation relative to the sender's observed cadence.
+
+- **Monitor:** P95 over the most recent 5 seconds; `Collecting` until enough fresh samples exist.
+- **History:** one P95 over the retained match samples, excluding the final 5 seconds before the last game-packet arrival. This also applies to timeout matches and manual Stop; it does not detect slow motion. It is not an average of Monitor values.
+- Old records and matches with insufficient retained samples show `-`. Warm-up, long pauses and sparse traffic are excluded. History stores no peer IP addresses or ports.
+
 
 ## Demo video
 
